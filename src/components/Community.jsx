@@ -1,6 +1,7 @@
 import React from "react"
 import { Col, Container, Row } from 'react-bootstrap';
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import sectionShapLight from "../assets/img/sectionShapLight.png";
+import gtitleImg from '../assets/img/gtitleImg.png';
 import img1 from '../assets/img/gallery/galleryImg1.png';
 import img2 from '../assets/img/gallery/galleryImg2.png';
 import img3 from '../assets/img/gallery/galleryImg3.png';
@@ -12,24 +13,12 @@ import img8 from '../assets/img/gallery/galleryImg8.png';
 import img9 from '../assets/img/gallery/galleryImg9.png';
 import img10 from '../assets/img/gallery/galleryImg10.png';
 import img11 from '../assets/img/gallery/galleryImg11.png';
-import gtitleImg from '../assets/img/gtitleImg.png';
-const images = [
-  '../assets/img/gallery/galleryImg11.png/200',
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-]
 export default function Tokenomics() {
-  const titleImg = ""
   return (
-    <section className="community" id="community">
+    <section className="community topShap" id="community">
+    <figure className='sectionShap'>
+      <img src={sectionShapLight} alt="" />
+    </figure>
       <Container>
         <Row>
           <Col md={7}>
@@ -52,18 +41,41 @@ export default function Tokenomics() {
         </Row>
         <Row>
           <Col>
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
-                <Masonry gutter="22px">
-                    {images.map((image, i) => (
-                        <img
-                            key={i}
-                            src={image}
-                            style={{width: "100%", display: "block"}}
-                            alt=""
-                        />
-                    ))}
-                </Masonry>
-            </ResponsiveMasonry>
+            <div class="grid-wrapper">
+              <div className="img1">
+                <img src={img1} alt="" />
+              </div>
+              <div  className="img2">
+              <img src={img2} alt="" />
+              </div>
+              <div  className="img3">
+              <img src={img3} alt="" />
+              </div>
+              <div  className="img4">
+              <img src={img4} alt="" />
+              </div>
+              <div  className="img5">
+              <img src={img5} alt="" />
+              </div>
+              <div className="img6">
+              <img src={img6} alt="" />
+              </div>
+              <div className="img7">
+              <img src={img7} alt="" />
+              </div>
+              <div className="img8">
+              <img src={img8} alt="" />
+              </div>
+              <div className="img9">
+              <img src={img9} alt="" />
+              </div>
+              <div  className="img10">
+              <img src={img10} alt="" />
+              </div>
+              <div  className="img11">
+              <img src={img11} alt="" />
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
