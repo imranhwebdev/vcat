@@ -71,6 +71,7 @@
         display: block;
         padding: 8px 21px;
         border-radius: 35px;
+        cursor: pointer;
         @include lg {
             padding: 10px 12px;
         }
