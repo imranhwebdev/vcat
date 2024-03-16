@@ -36,14 +36,14 @@ export default function Tokenomics() {
             <div className="gallery-title">
               <div className="title-info">
                 <h2>COMMUNITY </h2>
-                <p>Join the Community and Vibe with us. Tag @$VCAT And @VibingCatSolana and vibe Vibing Cat on Socials. </p>
+                <p>Join the Community and Vibe with us. Tag <b>@$VCAT</b> And <b> @VibingCatSolana</b> and vibe Vibing Cat on Socials. </p>
               </div>
               <figure>
-                <img src={gtitleImg} alt="" />
+                <img src={gtitleImg} alt=""/>
               </figure>
             </div>
           </Col>
-          <Col md={5}>
+          <Col md={5} className="text-end">
             <div className="gtitleRight">
               <h2>VIBES</h2>
               <p>The most active Vibing Cats will  receive some goodies now and then airdopped. Follow us and stay tuned!</p>
