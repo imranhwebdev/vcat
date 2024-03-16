@@ -1,0 +1,36 @@
+.community {
+    & h2 {
+        line-height: 70%;
+        letter-spacing: 1.4px;
+        margin-bottom: 65px;
+    }
+    & p {
+        @include font-24;
+        font-weight: 500;
+        padding-right: 210px;
+        font-family: 'CocogoosePro-light';
+    }
+    & .gallery-title {
+        position: relative;
+        z-index: 1;
+        & figure {
+            & img {
+                max-width: 383px;
+                position: absolute;
+                top: 0;
+                left: 83%;
+                transform: translate(0%, -28%);
+            }
+        }
+    }
+    & .gtitleRight {
+        & p {
+            padding-right: 0;
+            padding-left: 115px;
+        }
+    }
+    & .gtitleRight,
+    .gallery-title {
+        padding-bottom: 160px;
+    }
+}
