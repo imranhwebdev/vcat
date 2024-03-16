@@ -57,20 +57,21 @@ export default function HowToBuy() {
                 </Col>
             </Row>
             <Row className='justify-content-center'>
-              <Col xs={10} className='hItemWrapper'>
-              
-                {howToBuyData.map((item, index)=>(
-                  <div className="hSingleItem d-flex align-items-center" key={index}>
-                    <figure className='sImg'>
-                      <img src={item.img} alt="" />
-                    </figure>
-                    <div className="info">
-                      <h3>{item.hsTitle}</h3>
-                      <p>{item.hsDesc}</p>
+              <Col xs={10}>
+                <div className="hItemWrapper">
+                  {howToBuyData.map((item, index)=>(
+                    <div className="hSingleItem d-flex align-items-center" key={index}>
+                      <figure className='sImg'>
+                        <img src={item.img} alt="" />
+                      </figure>
+                      <div className="info">
+                        <h3>{item.hsTitle}</h3>
+                        <p>{item.hsDesc}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-                <div className="hSingleItem d-flex align-items-center">
+                  ))}
+                </div>
+                <div className="hSingleItem direction d-flex align-items-center">
                   <div className="info">
                     <h3>{tokenAddTitle}</h3>
                     <div className="tokenomics_copyTxt copytoclipboard">

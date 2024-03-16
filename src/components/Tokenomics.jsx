@@ -1,14 +1,18 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import tokenRimg from '../assets/img/tokenRimg.png';
+import sectionShapDeep from "../assets/img/sectionShapDeep.png";
 export default function Tokenomics() {
   const title = "TOKENOMICS";
-  const tstitle = "TOTAL SUPPLY";
-  const tsvalue = "TOTAL SUPPLY";
+  const tstitle = "Total supply";
+  const tsvalue = "1234567";
   const orTitle = "OWNERSHIP RENOUNCED:";
   const orDesc = "Vibing Cat is a community driven. Just like with many other top  memes, dev sold his tokens, and left, but as you see, its for the  good.";
   return (
-    <section className='tokenomics' id='tokenomics'>
+    <section className='tokenomics topShap' id='tokenomics'>
+    <figure className='sectionShap'>
+      <img src={sectionShapDeep} alt="" />
+    </figure>
         <Container>
             <Row>
                 <Col>
@@ -26,7 +30,7 @@ export default function Tokenomics() {
                   </div>
                   <div className="singleItem">
                     <h4>{orTitle}</h4>
-                    <h3>{orDesc}</h3>
+                    <p>{orDesc}</p>
                   </div>
                 </div>
               </Col>

@@ -1,37 +1,20 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
-import { Link, animateScroll as scroll} from 'react-scroll'
-import '../assets/scss/_header.scss'
+import { Link, animateScroll as scroll} from 'react-scroll';
+import ReactAudioPlayer from 'react-audio-player';
 import logo from '../assets/img/Logo.svg'
-
-
+import soundOne from '../assets/img/soundOne.png'
+import audioFile from '../assets/audio/audio.mp3';
 export default function Header() {
   const navLinks = [
-    {
-      btn_title: 'Vcat',
-      to: '/'
-    },
-    {
-      btn_title: 'about',
-      to: '/about'
-    },
-    {
-      btn_title: 'How to buy',
-      to: '/howtobuy'
-    },
-    {
-      btn_title: 'Tokenomics',
-      to: '/tokenomics'
-    },
-    {
-      btn_title: 'Vibe',
-      to: '/vibe'
-    },
-    {
-      btn_title: 'Roadmap',
-      to: '/roadmap'
-    },
+    { btn_title: 'Vcat', to: '/' },
+    { btn_title: 'About', to: '#about' },
+    { btn_title: 'How to Buy', to: '#howtobuy' },
+    { btn_title: 'Tokenomics', to: '#tokenomics' },
+    { btn_title: 'Vibe', to: '#vibe' },
+    { btn_title: 'Roadmap', to: '#roadmap' },
   ];
+
   const [isMenu, setIsMenu] = useState(false);
   const handleTouchStart  = (event) => {
     navigate(event);
@@ -50,16 +33,33 @@ export default function Header() {
     }
   }, [scrolled, setScrolled]);
 
+
+
+
+
+
+  const [audioPlaying, setAudioPlaying] = useState(false);
+  const audioRef = useRef(null);
+  const toggleAudio = () => {
+    const audio = audioRef.current.audioEl.current;
+    if (audioPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setAudioPlaying(!audioPlaying);
+  }
+
   return (
     <>
       <header className={`heading ${scrolled ? 'position-fixed' : ''}`}>
         <Container className='d-flex align-items-center justify-content-between'>
-          <Link className="logo" to="/">
+          <Link className="logo" href="/">
             <img src={logo} alt='logo' />
           </Link>
           <nav className={`heading-menu ${isMenu ?'show-menu':''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
-              <Link className="logo" to="/">
+              <Link className="logo" href="/">
                 <img src={logo} alt='logo' />
               </Link>
               <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
@@ -69,20 +69,28 @@ export default function Header() {
                 </svg>
               </button>
             </div>
-            <ul className="d-lg-flex align-items-center">
+            <ul className="main_menu d-lg-flex align-items-center">
               {navLinks.map((link, index) => (
-                <li key={index} className='d-block'>
-                  <Link className="heading-link text-capitalize" to={link.to} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
+                <li key={index} className={`d-block`}>
+                  <Link className={`heading-link text-capitalize ${index === 0 ? 'active' : ''}`} href={link.to} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
                 </li>
               ))}
-              <li className='heading-actions d-grid align-items-center d-lg-none'>
-                <Link to='/login' className='btn'>Sign In</Link>
-                <Link to='/sign-up' className='btn bg-primary text-white'>Sign Up</Link>
-              </li>
             </ul>
           </nav>
           <div className="heading-actions d-flex align-items-center flex-wrap">
-            <Link to='/login' className='btn'>  ON</Link>
+
+            <button className='soundOneOff d-flex align-items-center gap-2' onClick={toggleAudio}>
+              <img src={soundOne} alt="" /> {audioPlaying ? 'OFF' : 'ON'}
+            </button>
+
+            <ReactAudioPlayer ref={audioRef} src={audioFile} controls={audioPlaying} className='d-none' />
+            <button className="heading-toggler d-lg-none" onClick={() => setIsMenu(!isMenu)}>
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.08984 6H21.0898" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M3.08984 12H21.0898" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M3.08984 18H21.0898" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           </div>
         </Container>
       </header>

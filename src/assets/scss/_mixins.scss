@@ -18,8 +18,8 @@
     transform: translate(0, 0);
 }
 
-@mixin CocogoosePro-letterpress {
-    font-family: 'CocogoosePro-letterpress';
+@mixin CocogoosePro {
+    font-family: 'CocogoosePro';
 }
 
 @mixin CocogoosePro-letterpress {
@@ -122,6 +122,24 @@
     }
 }
 
+
+
+@mixin font-62 {
+    font-size: 62px;
+    line-height: 119%;
+    @include xl {
+        font-size: 55px;
+    }
+    @include lg {
+        font-size: 45px;
+    }
+    @include md {
+        font-size: 35px;
+    }
+    @include sm {
+        font-size: 30px;
+    }
+}
 
 
 

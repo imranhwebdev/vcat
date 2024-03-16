@@ -1,6 +1,7 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import rtitleImg from '../assets/img/RtitleImg.png';
+import sectionShapDeep from "../assets/img/sectionShapDeep.png";
 export default function RoadMap() {
   const title = "ROADMAP";
   const arrow = <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
@@ -33,23 +34,26 @@ const cardWrapper = [
   },
 ]
   return (
-    <section className='roadMap' id='roadMap'>
+    <section className='roadMap topShap' id='roadMap'>
+    <figure className='sectionShap'>
+      <img src={sectionShapDeep} alt="" />
+    </figure>
         <Container>
             <Row>
                 <Col>
-                  <div className="section-title">
+                  <div className="section-title d-flex justify-content-between align-items-end">
                     <h2>{title}</h2>
                     <img src={rtitleImg} alt="" />
                   </div>
                 </Col>
             </Row>
-            <Row>
+            <Row className='card-wrapper justify-content-center'>
               {cardWrapper.map((item, index)=>(
-                <Col lg={3} key={index}>
-                  <div className="single-card">
-                    <figure> {item.img} </figure>
+                <Col sm={6} lg={3} key={index} className='text-center text-md-start mb-4'>
+                  <a href='/' className="single-card">
+                    <a href="/"><figure> {item.img} </figure></a>
                     <p>{item.txt}</p>
-                  </div>
+                  </a>
                 </Col>
               ))}
             </Row>

@@ -70,6 +70,10 @@
         }
     &:nth-child(even){
         flex-direction: row-reverse;
+        @include sm{
+            flex-direction: column;
+            gap: 30px;
+        }
         &::before{
             background-position: top right;
             right: -30px;
@@ -77,7 +81,21 @@
         }
     }
     }
-
+    .hSingleItem{
+        @include sm{
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    .hSingleItem.direction{
+        flex-direction: row;
+        @include sm{
+            flex-direction: column-reverse;
+        }
+    }
+    .copyed svg {
+        font-size: 30px;
+    }
     .info {
         width: 100%;
     }
@@ -85,7 +103,7 @@
         position: relative;
             max-width: 769px;
         input {
-            min-width: 769px;
+            width: 100%;
             font-family: "Inter", sans-serif;
             background: transparent;
             height: 64px;

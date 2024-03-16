@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     z-index: 9;
-    background-color: rgba($color: $black, $alpha: .3);
+    background-color: transparent;
     padding: var(--bs-navbar-padding-y) 0;
     --bs-navbar-padding-y: 30px;
     @include md {
@@ -24,7 +24,7 @@
     }
     &.position-fixed {
         animation: headerAnimation .5s linear;
-        background-color: rgba($color: $black, $alpha: .9);
+        background-color: #85F377;
         --bs-navbar-padding-y: 24px;
         @include md {
             --bs-navbar-padding-y: 20px;
@@ -65,13 +65,12 @@
         }
     }
     &-link {
-        font-size: 18px;
-        line-height: 150%;
-        color: #74787D;
-        font-weight: 400;
-        // font-family: $font-1;
+        @include font-18;
+        color: $paragraph;
+        @include CocogoosePro;
         display: block;
-        padding: 10px 1rem;
+        padding: 8px 21px;
+        border-radius: 35px;
         @include lg {
             padding: 10px 12px;
         }
@@ -79,17 +78,18 @@
             font-weight: 600;
             @include font-20;
             color: $heading;
+            border-radius: 10px;
+            padding: 13px 15px;
         }
         &:hover,
         &.active {
-            color: $primary;
+            color: $white;
+            background-color: $heading;
+
         }
     }
     &-actions {
         grid-gap: 12px;
-        // @media (max-width: 991px) {
-        //     padding-right: 52px;
-        // }
         @include sm {
             grid-gap: 8px;
         }
@@ -130,5 +130,42 @@
                 --width: 26px;
             }
         }
+    }
+}
+
+.soundOneOff{
+    color: $black;
+    @include font-20;
+    @include CocogoosePro;
+    padding: 8px;
+    border-radius: 48px;
+    border:1px solid $paragraph;
+    cursor: pointer;
+    background-color: transparent !important;
+    width: 128px;
+    @include sm{
+        width: 100px;
+    }
+    @include ssm{
+        width: 85px;
+       font-size: 15px;
+    }
+    img{
+        max-width: 48px;
+        @include sm{
+            max-width: 35px;
+        }
+        @include ssm{
+            max-width: 28px;
+        }
+    }
+}
+
+.main_menu{
+    border: 1px solid $paragraph;
+    border-radius: 56px;
+    padding: 8px;
+    @include mmd{
+        border-radius: 10px;
     }
 }

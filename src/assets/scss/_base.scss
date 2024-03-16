@@ -28,21 +28,6 @@ html, html body{
     src: local('☺'),  
          url('../fonts/CocogooseProLightTrial.ttf') format('truetype'), 
 }
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-div::-webkit-scrollbar {
-    width: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(79deg, $primary 8.37%, #29d93b 86.44%);
-    border-radius: 20px;
-}
-div::-webkit-scrollbar-thumb {
-    background: linear-gradient(79deg, $primary 8.37%, #29d93b 86.44%);
-}
   
 body {
     font-family: 'CocogoosePro';
@@ -137,6 +122,9 @@ input::-webkit-inner-spin-button {
         border-radius: 50%;
         color: #fff;
         font-size: 22px;
+        @include mmd{
+            margin-bottom: 15px;
+        }
     }
     &:hover a{
         background-color: $hover;
