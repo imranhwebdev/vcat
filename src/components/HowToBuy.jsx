@@ -1,11 +1,25 @@
-import {React} from 'react'
+import {React, useState} from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { FaClipboardCheck  } from "react-icons/fa";
 import htitleImg from "../assets/img/HtitleImg.png";
 import hsimg1 from "../assets/img/hsimg1.png";
 import hsimg2 from "../assets/img/hsimg2.png";
 import hsimg3 from "../assets/img/hsimg3.png";
 import hsimg4 from "../assets/img/hsimg4.png";
+import sectionShaapLight from "../assets/img/sectionShapLight.png";
+import copyTxt from "../assets/img/copyTxt.png";
 export default function HowToBuy() {
+  const [textToCopy, setTextToCopy] = useState('0x69C0a0a9eC24B68Ad4795eD600cE23522E871994');
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        setIsCopied(true);
+      })
+      .catch(err => {
+        console.error('Failed to copy to clipboard: ', err);
+      });
+  };
   const title = "HOW TO BUY";
   const howToBuyData = [
     {
@@ -28,13 +42,18 @@ export default function HowToBuy() {
       hsTitle: "VCat Token Address",
       hsDesc: "Download Phantom from the app store or google play store for free. Desktop users, download the Phantom Google Chrome extension",
     },
-  ]
+  ];
+
+  const tokenAddTitle = "VCat Token Address";
   return (
-    <section className='howToBuy' id='howToBuy'>
+    <section className='howToBuy topShap' id='howToBuy'>
+      <figure className='sectionShap'>
+        <img src={sectionShaapLight} alt="" />
+      </figure>
         <Container>
-            <Row>
-                <Col>
-                  <div className="section-title d-flex text-center">
+            <Row className='justify-content-center'>
+                <Col xs={10}>
+                  <div className="section-title d-flex align-items-end justify-content-between">
                     <h2>{title}</h2>
                     <figure>
                       <img src={htitleImg} alt="" />
@@ -42,20 +61,46 @@ export default function HowToBuy() {
                   </div>
                 </Col>
             </Row>
-            <Row>
-              {howToBuyData.map((item, index)=>(
-                <div className="hSingleItem d-flex" key={index}>
-                  <figure className='sImg'>
-                    <img src={item.img} alt="" />
-                  </figure>
-                  <div className="info">
-                    <h3>{item.hsTitle}</h3>
-                    <p>{item.hsDesc}</p>
+            <Row className='justify-content-center'>
+              <Col xs={10} className='hItemWrapper'>
+              
+                {howToBuyData.map((item, index)=>(
+                  <div className="hSingleItem d-flex align-items-center" key={index}>
+                    <figure className='sImg'>
+                      <img src={item.img} alt="" />
+                    </figure>
+                    <div className="info">
+                      <h3>{item.hsTitle}</h3>
+                      <p>{item.hsDesc}</p>
+                    </div>
                   </div>
+                ))}
+                <div className="hSingleItem d-flex align-items-center">
+                  <div className="info">
+                    <h3>{tokenAddTitle}</h3>
+                    <div className="tokenomics_copyTxt copytoclipboard">
+                          <span className='c_title'></span> <input readOnly type="text"  value={textToCopy}
+                              onChange={(e) => setTextToCopy(e.target.value)}/>
+                          <button onClick={handleCopyToClipboard}>
+                            {!isCopied && (
+                              <span>
+                                <img src={copyTxt} alt="Copy Text" />
+                              </span>
+                            )}
+                            {isCopied && (
+                              <span className='copyed'>
+                                <FaClipboardCheck  />
+                              </span>
+                            )}
+                          </button>
+                      </div>
+                  </div>
+                  <figure className='sImg'>
+                    <img src={hsimg4} alt="" />
+                  </figure>
                 </div>
-              ))}
-              <Col>
               </Col>
+              
             </Row>
         </Container>
     </section>

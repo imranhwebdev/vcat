@@ -18,6 +18,18 @@
     transform: translate(0, 0);
 }
 
+@mixin CocogoosePro-letterpress {
+    font-family: 'CocogoosePro-letterpress';
+}
+
+@mixin CocogoosePro-letterpress {
+    font-family: 'CocogoosePro-letterpress';
+}
+
+@mixin CocogoosePro-light {
+    font-family: 'CocogoosePro-light';
+}
+
 @mixin font-150{
     font-size: 150px;
     line-height: 120%;
@@ -87,11 +99,36 @@
     }
 }
 
+@mixin font-114{
+    font-size: 114px;
+    line-height: 120%;
+    @include xxl {
+        font-size: 90px;
+    }
+    @include xl {
+        font-size: 80px;
+    }
+    @include lg {
+        font-size: 75px;
+    }
+    @include md {
+        font-size: 65px;
+    }
+    @include sm {
+        font-size: 55px;
+    }
+    @include xsm {
+        font-size: 50px;
+    }
+}
+
+
+
 
 
 @mixin font-48 {
     font-size: 48.827px;
-    line-height: 160%;
+    line-height: 125%;
     @include xl {
         font-size: 43px;
     }

@@ -94,11 +94,11 @@ export default function Footer() {
               <img src={Flogo} alt="" />
             </a>
             <p>{ftxtOne}</p>
-            <div className="socials">
+            <ul className="social-links">
               {socialInner.map((item, index)=>(
-                <a href={item.url} key={index}>{item.logo}</a>
+                <li key={index}><a href={item.url} key={index}>{item.logo}</a> </li>
               ))}
-            </div>
+            </ul>
           </Col>
           <Col md={4}>
             <ul className='fmenu'>

@@ -1,6 +1,6 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { FaMediumM, FaTwitter, FaPaperPlane} from "react-icons/fa";
+import { FaTwitter, FaPaperPlane} from "react-icons/fa";
 import bannerImg from '../assets/img/hero-right.png'
 export default function Banner(){
     const logo3 = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -19,29 +19,44 @@ export default function Banner(){
   </svg>;
   const title = "VIBING CAT";
   const subTitle = 'BRINGING THE VIBES  TO SOLANA NETWORK';
+  const social = [
+    {
+        logo: <FaPaperPlane />,
+        url: "https://google.com"
+    },
+    {
+        logo: <FaTwitter />,
+        url: "https://google.com"
+    },
+    {
+        logo: logo3,
+        url: "https://google.com"
+    },
+    {
+        logo: logo4,
+        url: "https://google.com"
+    },
+  ]
     return(
         <div className="banner">
             <Container>
                 <Row className='align-items-center'>
                     <Col lg={7}>
                         <div className="banner-content">
-                            <h1 className='text-white'>{title}</h1>
-                            <h3>{subTitle}</h3>
-                            <div className="social-links">
-                                <ul>
-                                    <li><a href="/"><FaPaperPlane /></a></li>
-                                    <li><a href="/"><FaTwitter /></a></li>
-                                    <li><a href="/">{logo3}</a></li>
-                                    <li><a href="/">{logo4}</a></li>
-                                </ul>
-                            </div>
+                            <h1>{title}</h1>
+                            <p>{subTitle}</p>
+                            <ul className="social-links">
+                                {social.map((item, index)=>(
+                                    <li key={index}><a href={item.url}>{item.logo}</a></li>
+                                ))}
+                            </ul>
                         </div>
                     </Col>
                     <Col lg={5} className='text-end'>
                         <div className="banner-img">
-                            <firure className="banner-right-img">
+                            <figure className="banner-right-img">
                                 <img src={bannerImg} alt="" />
-                            </firure>
+                            </figure>
                         </div>
                     </Col>
                 </Row>
