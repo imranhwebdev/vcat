@@ -1,5 +1,5 @@
 import { React } from 'react'
-import Header from './components/Header'
+// import Header from './components/Header'
 import Banner from './components/Banner'
 import About from './components/About'
 import HowToBuy from './components/HowToBuy'
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Banner />
       <About />
       <HowToBuy />
