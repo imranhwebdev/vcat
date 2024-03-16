@@ -15,7 +15,7 @@ import img10 from '../assets/img/gallery/galleryImg10.png';
 import img11 from '../assets/img/gallery/galleryImg11.png';
 export default function Tokenomics() {
   return (
-    <section className="community topShap" id="community">
+    <section className="community topShap" id="vibe">
     <figure className='sectionShap'>
       <img src={sectionShapLight} alt="" />
     </figure>

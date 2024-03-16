@@ -22,23 +22,23 @@ export default function Banner(){
   const social = [
     {
         logo: <FaPaperPlane />,
-        url: "https://google.com"
+        url: "https://t.me/vibing_cat"
     },
     {
         logo: <FaTwitter />,
-        url: "https://google.com"
+        url: "https://twitter.com/VibingCatSolana"
     },
     {
         logo: logo3,
-        url: "https://google.com"
+        url: "https://www.coingecko.com/en/coins/vibing-cat"
     },
     {
         logo: logo4,
-        url: "https://google.com"
+        url: "https://dexscreener.com/solana/m9uixqnmaxp7bnmtrf4nwkekexjt5hc6ftyjtnjb6e5"
     },
   ]
     return(
-        <div className="banner">
+        <div className="banner" id='hero'>
             <Container>
                 <Row className='align-items-center'>
                     <Col lg={7}>

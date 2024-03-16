@@ -4,17 +4,9 @@ import { Link, animateScroll as scroll} from 'react-scroll';
 import ReactAudioPlayer from 'react-audio-player';
 import logo from '../assets/img/Logo.svg'
 import soundOne from '../assets/img/soundOne.png'
+import soundOff from '../assets/img/soundOff.png'
 import audioFile from '../assets/audio/audio.mp3';
 export default function Header() {
-  const navLinks = [
-    { btn_title: 'Vcat', to: '/' },
-    { btn_title: 'About', to: '#about' },
-    { btn_title: 'How to Buy', to: '#howtobuy' },
-    { btn_title: 'Tokenomics', to: '#tokenomics' },
-    { btn_title: 'Vibe', to: '#vibe' },
-    { btn_title: 'Roadmap', to: '#roadmap' },
-  ];
-
   const [isMenu, setIsMenu] = useState(false);
   const handleTouchStart  = (event) => {
     navigate(event);
@@ -32,11 +24,6 @@ export default function Header() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [scrolled, setScrolled]);
-
-
-
-
-
 
   const [audioPlaying, setAudioPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -70,17 +57,19 @@ export default function Header() {
               </button>
             </div>
             <ul className="main_menu d-lg-flex align-items-center">
-              {navLinks.map((link, index) => (
-                <li key={index} className={`d-block`}>
-                  <Link className={`heading-link text-capitalize ${index === 0 ? 'active' : ''}`} href={link.to} onTouchStart={() => handleTouchStart(link.to)}>{link.btn_title}</Link>
-                </li>
-              ))}
+              <Link to="hero" className='heading-link text-capitalize' spy={true} smooth={true} offset={-320} duration={150} >VCAT</Link>
+              <Link to="about" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >About</Link>
+              <Link to="howtobuy" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >How to buy</Link>
+              <Link to="tokenomics" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={50} >Tokenomics</Link>
+              <Link to="vibe" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >Vibe</Link>
+              <Link to="roadMap" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >Roadmap</Link>
             </ul>
           </nav>
           <div className="heading-actions d-flex align-items-center flex-wrap">
 
             <button className='soundOneOff d-flex align-items-center gap-2' onClick={toggleAudio}>
-              <img src={soundOne} alt="" /> {audioPlaying ? 'OFF' : 'ON'}
+              {audioPlaying ? (<img src={soundOff} />) : (<img src={soundOne} />)}
+                {audioPlaying ? 'OFF' : 'ON'}
             </button>
 
             <ReactAudioPlayer ref={audioRef} src={audioFile} controls={audioPlaying} className='d-none' />

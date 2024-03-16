@@ -41,7 +41,7 @@ export default function HowToBuy() {
 
   const tokenAddTitle = "VCat Token Address";
   return (
-    <section className='howToBuy topShap' id='howToBuy'>
+    <section className='howToBuy topShap' id='howtobuy'>
       <figure className='sectionShap'>
         <img src={sectionShaapLight} alt="" />
       </figure>

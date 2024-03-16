@@ -34,27 +34,27 @@ export default function Footer() {
  const socialInner = [
   {
     logo : socialIcon1,
-    url : "https://google.com",
+    url: "https://t.me/vibing_cat"
   },
   {
     logo : socialIcon2,
-    url : "https://google.com",
+    url: "https://twitter.com/VibingCatSolana"
   },
   {
     logo : socialIcon3,
-    url : "https://google.com",
+    url: "https://dexscreener.com/solana/m9uixqnmaxp7bnmtrf4nwkekexjt5hc6ftyjtnjb6e5"
   },
   {
     logo : socialIcon4,
-    url : "https://google.com",
+    url: "https://www.coingecko.com/en/coins/vibing-cat"
   },
   {
     logo : socialIcon5,
-    url : "https://google.com",
+    url : "https://www.tiktok.com/@vibingcatsolana",
   },
   {
     logo : socialIcon6,
-    url : "https://google.com",
+    url : "https://www.instagram.com/vibingcatcoin/",
   },
  ];
  const fmenu = [
@@ -72,7 +72,7 @@ export default function Footer() {
   },
   {
     menuTxt:"Tokenomics",
-    menuUrl:"#Tokenomics",
+    menuUrl:"#tokenomics",
   },
   {
     menuTxt:"Vibe",
@@ -80,7 +80,7 @@ export default function Footer() {
   },
   {
     menuTxt:"Roadmap",
-    menuUrl:"#roadmap",
+    menuUrl:"#roadMap",
   },
  ];
  const currentDate = new Date();

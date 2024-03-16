@@ -110,6 +110,9 @@
             padding: 8px 8px 8px 24px;
             border-radius: 8px;
             border: 1px solid #000;
+            @include font-20;
+            font-weight: 600;
+
         }
         button{
             border: 0;

@@ -42,40 +42,17 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* Main CSS */
 .grid-wrapper > div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    border-radius: 16px;
-    border: 4px solid #000;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }
 .grid-wrapper > div > img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 5px;
+    border-radius: 16px;
+    border: 4px solid #000;
 }
 
 .grid-wrapper {
