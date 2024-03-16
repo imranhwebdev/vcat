@@ -37,11 +37,6 @@ export default function HowToBuy() {
       hsTitle: "Connect a Wallet",
       hsDesc: "Connect to Raydium or Jupiter and in Google Chrome or on the browser inside your  Phantom app. Connect your wallet. Paste the VCAT token token address into search, select VCAT and conrm. When your wallet prompts you for a wallet signature, sign.",
     },
-    {
-      img: hsimg4,
-      hsTitle: "VCat Token Address",
-      hsDesc: "Download Phantom from the app store or google play store for free. Desktop users, download the Phantom Google Chrome extension",
-    },
   ];
 
   const tokenAddTitle = "VCat Token Address";
@@ -79,8 +74,9 @@ export default function HowToBuy() {
                   <div className="info">
                     <h3>{tokenAddTitle}</h3>
                     <div className="tokenomics_copyTxt copytoclipboard">
-                          <span className='c_title'></span> <input readOnly type="text"  value={textToCopy}
+                          <input readOnly type="text"  value={textToCopy}
                               onChange={(e) => setTextToCopy(e.target.value)}/>
+
                           <button onClick={handleCopyToClipboard}>
                             {!isCopied && (
                               <span>

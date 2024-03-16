@@ -77,4 +77,30 @@
         }
     }
     }
+
+    .info {
+        width: 100%;
+    }
+    .tokenomics_copyTxt{
+        position: relative;
+            max-width: 769px;
+        input {
+            min-width: 769px;
+            font-family: "Inter", sans-serif;
+            background: transparent;
+            height: 64px;
+            padding: 8px 8px 8px 24px;
+            border-radius: 8px;
+            border: 1px solid #000;
+        }
+        button{
+            border: 0;
+            background: transparent;
+            padding: 0;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 }
