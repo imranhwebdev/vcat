@@ -100,7 +100,7 @@ export default function Footer() {
             <p className='wallet-txt'>{ftxtOne}</p>
             <ul className="social-links">
               {socialInner.map((item, index)=>(
-                <li key={index}><a href={item.url} key={index}>{item.logo}</a> </li>
+                <li key={index}><a target='_blank' href={item.url} key={index}>{item.logo}</a> </li>
               ))}
             </ul>
           </Col>
@@ -108,7 +108,7 @@ export default function Footer() {
             <div className="footerMiddle d-flex">
               <ul className='fmenu'>
                 {fmenu.map((item, index)=>(
-                  <li key={index}><a target='_blank' href={item.menuUrl}>{item.menuTxt}</a></li>
+                  <li key={index}><a href={item.menuUrl}>{item.menuTxt}</a></li>
                 ))}
               </ul>
               <p>{copyright}</p>
