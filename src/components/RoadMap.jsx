@@ -1,6 +1,6 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import rtitleImg from '../assets/img/RtitleImg.png';
+import rtitleImg from '../assets/img/RtitleImg.gif';
 import sectionShapDeep from "../assets/img/sectionShapDeep.png";
 export default function RoadMap() {
   const title = "ROADMAP";
@@ -43,7 +43,9 @@ const cardWrapper = [
                 <Col>
                   <div className="section-title d-flex justify-content-between align-items-end">
                     <h2>{title}</h2>
-                    <img src={rtitleImg} alt="" />
+                    <figure>
+                      <img src={rtitleImg} alt="" />
+                    </figure>
                   </div>
                 </Col>
             </Row>

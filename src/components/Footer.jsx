@@ -93,7 +93,7 @@ export default function Footer() {
     </figure>
       <Container>
         <Row className='align-items-end'>
-          <Col md={4} className='order-2 order-md-1'>
+          <Col md={4} className='order-2 order-md-1 text-center text-md-start mt-4 mt-md-0'>
             <a href="/" className='footerLogo'>
               <img src={Flogo} alt="" />
             </a>

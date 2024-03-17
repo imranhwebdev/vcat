@@ -47,7 +47,7 @@ export default function HowToBuy() {
       </figure>
         <Container>
             <Row className='justify-content-center'>
-                <Col xs={10}>
+                <Col sm={10}>
                   <div className="section-title d-flex align-items-end justify-content-between">
                     <h2>{title}</h2>
                     <figure>
@@ -57,7 +57,7 @@ export default function HowToBuy() {
                 </Col>
             </Row>
             <Row className='justify-content-center'>
-              <Col xs={10}>
+              <Col sm={10}>
                 <div className="hItemWrapper">
                   {howToBuyData.map((item, index)=>(
                     <div className="hSingleItem d-flex align-items-center" key={index}>

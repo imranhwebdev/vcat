@@ -2,6 +2,19 @@
     padding-top: 410px;
     padding-bottom: 206px;
     background-color: $primary2;
+    @include lg{
+        padding-top: 250px;
+        padding-bottom: 150px;
+    }
+    @include mmd{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    @include sm{
+        padding-top: 120px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
     .aboutLeft{
         position: relative;
     }
@@ -11,6 +24,13 @@
         bottom: 0;
         max-width: 724px;
         margin-bottom: -85px;
+        @include mmd{
+            max-width: 400px;
+            margin-bottom: 0;
+        }
+        @include sm{
+          display: none;
+        }
     }
     .aboutContent{
         h2{

@@ -12,12 +12,12 @@ export default function About() {
       </figure>
         <Container>
             <Row>
-                <Col lg={6} className='aboutLeft'>
+                <Col md={6} className='aboutLeft'>
                   <figure className='aboutImg'>
                     <img src={aboutImg} alt="" />
                   </figure>
                 </Col>
-                <Col lg={6}>
+                <Col md={6}>
                   <div className="aboutContent">
                     <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>  
                     <p>{desc}</p>

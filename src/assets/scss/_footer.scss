@@ -3,11 +3,16 @@
     padding-bottom: 90px;
     @include mmd{
         padding-top: 150px;
+        padding-bottom: 40px;
     }
     .footerLogo{
         max-width: 358px;
         margin-bottom: 25px;
         display: inline-block;
+        @include sm{
+            max-width: 200px;
+            margin-bottom: 15px;
+        }
     }
     .wallet-txt{
         margin-bottom: 70px;
@@ -21,6 +26,9 @@
     .footerMiddle{
         flex-direction: column;
         justify-content: space-between;
+        @include sm{
+            text-align: center;
+        }
         p{
             font-family: "Inter", sans-serif;  
             @include font-20;
@@ -40,6 +48,15 @@
         }
     }
     .fmenu{
+        @include sm{
+            text-align: center;
+            margin-top: 20px;
+        }
+        li{
+            @include sm{
+                display: inline-block;
+            }
+        }
         a{
             display: block;
             color: $paragraph;
@@ -52,14 +69,29 @@
             &:hover{
                 opacity: .5;
             }
+            @include sm{
+                padding: 5px 15px;
+            }
         }
         margin-bottom: 60px;
         @include mmd{
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
     }
     .footerRight{
        margin-top: -130px;
+    }
+    .social-links{
+        a{
+            margin:12px 15px;
+        }
+    }
+    .frImg{
+        max-width: 498px;
+        @include sm{
+            max-width: 300px;
+            margin: 0 auto;
+        }
     }
 }

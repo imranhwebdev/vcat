@@ -1,13 +1,29 @@
 .howToBuy{
     padding-top: 276px;
     padding-bottom: 122px;
+    @include lg{
+        padding-bottom: 100px;
+    }
+    @include mmd{
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+    @include sm{
+        padding-bottom: 50px;
+    }
     .section-title{
         position: relative;
         gap: 30px;
         margin-top: -300px;
+        @include mmd{
+            margin-top: -100px;
+        }
         h2{
             @include font-114;
             margin-bottom: -25px;
+            @include mmd{
+                margin-bottom: 0;
+            }
             @include sm{
                 margin-bottom: 0;
                 text-align: center;
@@ -15,6 +31,9 @@
         }
         figure{
             max-width: 388px;
+            @include mmd{
+                max-width: 200px;
+            }
         }
         @include sm{
             flex-direction: column-reverse;
@@ -35,6 +54,10 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
+        @include sm{
+            border-radius: 15px;
+            padding: 30px 20px;
+        }
         &::before{
             position: absolute;
             content: "";
@@ -49,12 +72,24 @@
             z-index: -1;
             transform: translateY(-50%);
             scale: 1.1;
+            @include sm{
+                top: 0;
+                left: 50%;
+                background-position: center center;
+                transform: translate(-47%, -40px);
+            }
         }
         .sImg{
             min-width: 193px;
             text-align: center;
+            @include sm{
+                max-width: 120px;
+            }
             img{
-                width: auto;
+                max-width: 193px;
+                @include sm{
+                    max-width: 120px;
+                }
             }
         }
         h3{
@@ -78,6 +113,12 @@
             background-position: top right;
             right: -30px;
             left: auto;
+            @include sm{
+                top: 0;
+                left: 50%;
+                background-position: center center;
+                transform: translate(-47%, -40px);
+            }
         }
     }
     }
@@ -98,6 +139,9 @@
     }
     .info {
         width: 100%;
+        @include sm{
+            text-align: center;
+        }
     }
     .tokenomics_copyTxt{
         position: relative;
@@ -112,7 +156,11 @@
             border: 1px solid #000;
             @include font-20;
             font-weight: 600;
+            padding-right: 45px;
+            @include sm{
+                padding-left: 12px;
 
+            }
         }
         button{
             border: 0;
@@ -122,6 +170,9 @@
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
+            img{
+                max-width: 40px;
+            }
         }
     }
 }

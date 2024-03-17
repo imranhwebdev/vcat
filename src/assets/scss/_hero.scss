@@ -3,6 +3,11 @@
     padding-bottom: 175px;
     position: relative;
     z-index: 1;
+    @include sm{
+        padding-top: 150px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
     h1{
         color: $heading;
         margin-bottom: 25px;
@@ -12,16 +17,25 @@
        color: $black;
        margin-bottom: 88px;
        max-width: 627px;
+       @include sm{
+        margin: 0 auto 30px;
+       }
     }
     .social-links{
         border:1px solid $paragraph;
         display: inline-block;
         padding: 8px;
         border-radius: 48px;
+        a{
+            margin-bottom: 0;
+        }
     }
     .banner-img{
         position: relative;
         z-index: 1;
+        @include sm{
+            margin-top: 38px;
+        }
         &::before{
             position: absolute;
             content: "";
@@ -36,8 +50,34 @@
             z-index: -1;
         }
         .banner-right-img{
+            max-width: 660px;
+            height: 490px;
+            background-color: $white;
+            transform: skew(-2deg, 0deg);
+            padding: 17px;
+            border:4px solid $black;
+            position: relative;
+            z-index: 1;
+            @include mmd{
+                height: auto;
+                margin: 0 auto;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.1;
+                background: #00000066 0px 0px / 100% 100% no-repeat;
+                background-blend-mode: multiply;
+                filter: blur(12px);
+                mix-blend-mode: multiply;
+                scale: 1.1;
+            }
             img{
-                transform: scale(1.08);
+                height: 100%;
             }
         }
     }
