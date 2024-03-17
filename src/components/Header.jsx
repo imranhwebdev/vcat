@@ -4,6 +4,7 @@ import { Link, animateScroll as scroll} from 'react-scroll';
 import ReactAudioPlayer from 'react-audio-player';
 import logo from '../assets/img/Logo.svg'
 import soundOne from '../assets/img/soundOne.png'
+import logogif from '../assets/img/logo.gif'
 import soundOff from '../assets/img/soundOff.png'
 import audioFile from '../assets/audio/audio.mp3';
 export default function Header() {
@@ -42,12 +43,12 @@ export default function Header() {
       <header className={`heading ${scrolled ? 'position-fixed' : ''}`}>
         <Container className='d-flex align-items-center justify-content-between'>
           <Link className="logo" href="/">
-            <img src={logo} alt='logo' />
+          VCAT <img src={logogif} alt='logo' />
           </Link>
           <nav className={`heading-menu ${isMenu ?'show-menu':''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
               <Link className="logo" href="/">
-                <img src={logo} alt='logo' />
+              VCAT <img src={logogif} alt='logo' />
               </Link>
               <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
