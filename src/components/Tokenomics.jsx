@@ -22,7 +22,7 @@ export default function Tokenomics() {
                 </Col>
             </Row>
             <Row className='align-items-center'>
-              <Col md={6} className='order-2 order-md-1'>
+              <Col md={6} lg={{ span: 6, offset: 1 }} className='order-2 order-md-1'>
                 <div className="tokenInfo">
                   <div className="singleItem">
                     <h5>{tstitle}</h5>
@@ -34,7 +34,7 @@ export default function Tokenomics() {
                   </div>
                 </div>
               </Col>
-              <Col md={6} className='order-1 order-md-2'>
+              <Col md={6} lg={5} className='order-1 order-md-2'>
                 <figure className='tokenImg'>
                   <img src={tokenRimg} alt="" />
                 </figure>

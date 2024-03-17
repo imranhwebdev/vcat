@@ -108,7 +108,7 @@ export default function Footer() {
             <div className="footerMiddle d-flex">
               <ul className='fmenu'>
                 {fmenu.map((item, index)=>(
-                  <li key={index}><a href={item.menuUrl}>{item.menuTxt}</a></li>
+                  <li key={index}><a target='_blank' href={item.menuUrl}>{item.menuTxt}</a></li>
                 ))}
               </ul>
               <p>{copyright}</p>

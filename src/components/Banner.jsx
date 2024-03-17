@@ -47,7 +47,7 @@ export default function Banner(){
                             <p>{subTitle}</p>
                             <ul className="social-links">
                                 {social.map((item, index)=>(
-                                    <li key={index}><a href={item.url}>{item.logo}</a></li>
+                                    <li key={index}><a target='_blank' href={item.url}>{item.logo}</a></li>
                                 ))}
                             </ul>
                         </div>
