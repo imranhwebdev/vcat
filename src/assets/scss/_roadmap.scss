@@ -5,6 +5,10 @@
         padding-top: 315px;
         padding-bottom: 70px;
     }
+    @include ssm{
+        padding-top: 285px;
+        padding-bottom: 50px;
+    }
     .section-title{
         margin-top: -200px;
         @include sm{
@@ -49,6 +53,9 @@
     margin-top: 80px;
     @include sm{
         margin-top: 40px;
+    }
+    @include sm{
+        margin-top: 15px;
     }
 }
 .single-card{

@@ -15,6 +15,9 @@
         padding-bottom: 70px;
         text-align: center;
     }
+    @include ssm{
+        padding-top: 90px;
+    }
     .aboutLeft{
         position: relative;
     }
