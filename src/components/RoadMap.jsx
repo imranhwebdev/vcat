@@ -48,9 +48,9 @@ const cardWrapper = [
             <Row className='card-wrapper justify-content-center'>
               {cardWrapper.map((item, index)=>(
                 <Col sm={6} lg={3} key={index} className='text-center text-md-start mb-4'>
-                  <a href='/'  target='_blank' className="single-card">
+                  <div className="single-card">
                     <p>{item.txt}</p>
-                  </a>
+                  </div>
                 </Col>
               ))}
             </Row>
