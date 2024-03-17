@@ -101,6 +101,9 @@
 
 
 .grid-wrapper > div {
+    border: 4px solid #000;
+    overflow: hidden;
+    border-radius: 16px;
 	@include ssm{
         margin-bottom: 20px;
     }
@@ -109,8 +112,6 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-    border-radius: 16px;
-    border: 4px solid #000;
 }
 
 .grid-wrapper {
@@ -143,7 +144,7 @@
 }
 .grid-wrapper .img5 {
 	grid-row: span 1;
-	grid-column: span 2;
+	grid-column: span 1;
 }
 
 .grid-wrapper .img6 {
