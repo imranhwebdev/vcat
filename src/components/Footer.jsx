@@ -61,7 +61,7 @@ export default function Footer() {
  const fmenu = [
   {
     menuTxt:"Vcat",
-    menuUrl:"#vcat",
+    menuUrl:"#hero",
   },
   {
     menuTxt:"About",
@@ -76,12 +76,12 @@ export default function Footer() {
     menuUrl:"#tokenomics",
   },
   {
-    menuTxt:"Vibe",
-    menuUrl:"#vibe",
-  },
-  {
     menuTxt:"Roadmap",
     menuUrl:"#roadMap",
+  },
+  {
+    menuTxt:"Vibe",
+    menuUrl:"#vibe",
   },
  ];
  const currentDate = new Date();
