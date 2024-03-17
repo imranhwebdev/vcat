@@ -52,33 +52,25 @@
     }
 }
 .single-card{
-    padding: 40px 32px 80px;
+    padding: 50px 32px;
     border-radius: 12px;
     border: 2px solid #0A1A03;
     height: 100%;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     transition: all .3s ease-in-out;
     margin-bottom: 30px;
     @include sm{
         padding: 30px;
-    }
-    a{
-        display: inline-block;
-        margin-bottom: 90px;
-        transition: all .3s ease-in-out;
-        svg{
-            transition: all .3s ease-in-out;
-        }
-        
-        @include sm{
-            margin-bottom: 40px;
-        }
     }
     p{
         color: #081702 !important;
         opacity: 0.8;
         max-width: 292px;
         @include font-24;
+        @include sm{
+            margin:0 auto;
+        }
     }
     &:hover a svg{
         transform: rotate(45deg);

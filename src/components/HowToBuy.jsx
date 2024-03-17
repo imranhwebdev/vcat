@@ -35,7 +35,7 @@ export default function HowToBuy() {
     {
       img: hsimg3,
       hsTitle: "Connect a Wallet",
-      hsDesc: "Connect to Raydium or Jupiter and in Google Chrome or on the browser inside your  Phantom app. Connect your wallet. Paste the VCAT token token address into search, select VCAT and conrm. When your wallet prompts you for a wallet signature, sign.",
+      hsDesc: "Connect to Raydium or Jupiter and in Google Chrome or on the browser inside your  Phantom app. Connect your wallet. Paste the VCAT token token address into search, select VCAT and confrom. When your wallet prompts you for a wallet signature, sign.",
     },
   ];
 

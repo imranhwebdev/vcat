@@ -17,19 +17,15 @@ export default function RoadMap() {
 </svg>;
 const cardWrapper = [
   {
-    img: arrow,
     txt: "Tai pa pà, pai par ibi la pari-sse ndella den ga-ndo",
   },
   {
-    img: arrow,
     txt: "Iabari babà bai barì bairi biribiribiri tse ndel la-ngo",
   },
   {
-    img: arrow,
     txt: "Ga dilla dilma de-jarò, daghe daghe daghe dugu dugu di iadu",
   },
   {
-    img: arrow,
     txt: "Ia ba dilla dilma de-jarò daghe daghe daghe dugu dugu du iadu",
   },
 ]
@@ -53,7 +49,6 @@ const cardWrapper = [
               {cardWrapper.map((item, index)=>(
                 <Col sm={6} lg={3} key={index} className='text-center text-md-start mb-4'>
                   <a href='/'  target='_blank' className="single-card">
-                    <a href="/"><figure> {item.img} </figure></a>
                     <p>{item.txt}</p>
                   </a>
                 </Col>
