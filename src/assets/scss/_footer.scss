@@ -9,8 +9,27 @@
         max-width: 358px;
         margin-bottom: 25px;
         display: inline-block;
+        @include CocogoosePro-letterpress;
+        font-size: 80px;
+        letter-spacing: 3%;
+        color: #010101;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        @include mmd{
+            font-size: 40px;
+        }
+        & img{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            @include mmd{
+                width: 50px;
+                height: 50px;
+            }
+
+        }
         @include sm{
-            max-width: 200px;
             margin-bottom: 15px;
         }
     }
@@ -84,7 +103,7 @@
     }
     .social-links{
         a{
-            margin:12px 15px;
+            margin:12px 8px;
         }
     }
     .frImg{

@@ -20,6 +20,9 @@
         @include sm{
             margin-bottom: 30px;
         }
+        @include ssm{
+            letter-spacing: 1px;
+        }
     }
     & p {
         @include font-24;

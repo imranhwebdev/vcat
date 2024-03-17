@@ -19,6 +19,10 @@
             @include sm{
                 margin: 0 auto 30px;
             }
+            @include ssm{
+                letter-spacing: 1px;
+
+            }
         }
         & figure{
             @include sm{

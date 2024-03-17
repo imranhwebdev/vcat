@@ -139,11 +139,12 @@ button:focus {
 .logo{
     font-size: 34px;
     color: #010101;
-    @include CocogoosePro;
+    @include CocogoosePro-letterpress;
     letter-spacing: 3%;
     img {
-        max-width: 55px;
-        border-radius: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
     }
 }
 }

@@ -116,7 +116,7 @@ input::-webkit-inner-spin-button {
         width: 48px;
         height: 48px;
         background-color: $heading;
-        margin-right: 16px;
+        margin-right: 8px;
         text-align: center;
         line-height: 48px;
         border-radius: 50%;
@@ -129,6 +129,12 @@ input::-webkit-inner-spin-button {
     &:hover a{
         background-color: $hover;
     }
+    &:last-child a{
+        margin-right: 0;
+    }
+}
+.social-links li:nth-child(1) svg {
+    margin-left: -1.5px;
 }
 .topShap{
     position: relative;

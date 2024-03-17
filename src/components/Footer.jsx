@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Flogo from "../assets/img/footer-logo.png";
 import frImg from "../assets/img/frImg.png";
 import sectionShapLight from "../assets/img/sectionShapLight.png";
+import logogif from '../assets/img/logo.gif'
 export default function Footer() {
   const ftxtOne = 'Literally Vibes in your Wallet';
   const socialIcon1 = <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
@@ -95,7 +96,7 @@ export default function Footer() {
         <Row className='align-items-end'>
           <Col md={4} className='order-2 order-md-1 text-center text-md-start mt-4 mt-md-0'>
             <a href="/" className='footerLogo'>
-              <img src={Flogo} alt="" />
+              VCAT <img src={logogif} alt='logo' />
             </a>
             <p className='wallet-txt'>{ftxtOne}</p>
             <ul className="social-links">
