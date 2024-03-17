@@ -2,19 +2,17 @@ import React from "react"
 import { Col, Container, Row } from 'react-bootstrap';
 import sectionShapDeep from "../assets/img/sectionShapDeep.png";
 import gtitleImg from '../assets/img/gtitleImg.png';
-import img1 from '../assets/img/gallery/1VCAT.png';
-import img2 from '../assets/img/gallery/2VCAT.png';
-import img3 from '../assets/img/gallery/3VCAT.png';
-import img4 from '../assets/img/gallery/4VCAT.png';
-import img5 from '../assets/img/gallery/5VCAT.png';
-import img6 from '../assets/img/gallery/6VCAT.png';
-import img7 from '../assets/img/gallery/7VCAT.png';
-import img8 from '../assets/img/gallery/9VCAT.png';
-import img9 from '../assets/img/gallery/10VCAT.png';
-import img10 from '../assets/img/gallery/11VCAT.png';
-import img11 from '../assets/img/gallery/12VCAT.png';
-import img12 from '../assets/img/gallery/13VCAT.png';
-import img13 from '../assets/img/gallery/14VCAT.png';
+import img1 from '../assets/img/gallery/VCAT1.png';
+import img2 from '../assets/img/gallery/VCAT2.png';
+import img3 from '../assets/img/gallery/VCAT3.png';
+import img4 from '../assets/img/gallery/VCAT4.png';
+import img5 from '../assets/img/gallery/VCAT5.png';
+import img6 from '../assets/img/gallery/VCAT6.png';
+import img7 from '../assets/img/gallery/VCAT7.png';
+import img8 from '../assets/img/gallery/VCAT8.png';
+import img9 from '../assets/img/gallery/VCAT9.png';
+import img10 from '../assets/img/gallery/VCAT10.png';
+import img11 from '../assets/img/gallery/VCAT11.png';
 export default function Community() {
   return (
     <section className="community topShap" id="vibe">
@@ -74,12 +72,6 @@ export default function Community() {
               </div>
               <div  className="img11">
               <img src={img11} alt="" />
-              </div>
-              <div  className="img12">
-              <img src={img12} alt="" />
-              </div>
-              <div  className="img13">
-              <img src={img13} alt="" />
               </div>
             </div>
           </Col>

@@ -96,7 +96,7 @@
             @include CocogoosePro-letterpress;
             @include font-32;
             color: $textC3;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         p{
             @include CocogoosePro-light;
@@ -146,6 +146,8 @@
     .tokenomics_copyTxt{
         position: relative;
             max-width: 769px;
+            display: block;
+            margin-top: 20px;
         input {
             width: 100%;
             font-family: "Inter", sans-serif;
