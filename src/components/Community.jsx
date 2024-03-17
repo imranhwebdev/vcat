@@ -1,6 +1,6 @@
 import React from "react"
 import { Col, Container, Row } from 'react-bootstrap';
-import sectionShapLight from "../assets/img/sectionShapLight.png";
+import sectionShapDeep from "../assets/img/sectionShapDeep.png";
 import gtitleImg from '../assets/img/gtitleImg.png';
 import img1 from '../assets/img/gallery/1VCAT.png';
 import img2 from '../assets/img/gallery/2VCAT.png';
@@ -15,11 +15,11 @@ import img10 from '../assets/img/gallery/11VCAT.png';
 import img11 from '../assets/img/gallery/12VCAT.png';
 import img12 from '../assets/img/gallery/13VCAT.png';
 import img13 from '../assets/img/gallery/14VCAT.png';
-export default function Tokenomics() {
+export default function Community() {
   return (
     <section className="community topShap" id="vibe">
     <figure className='sectionShap'>
-      <img src={sectionShapLight} alt="" />
+      <img src={sectionShapDeep} alt="" />
     </figure>
       <Container>
         <Row>
@@ -27,7 +27,7 @@ export default function Tokenomics() {
             <div className="gallery-title d-flex">
               <div className="title-info">
                 <h2>COMMUNITY </h2>
-                <p>Join the Community and Vibe with us. Tag <b>@$VCAT</b> And <b> @VibingCatSolana</b> and vibe Vibing Cat on Socials. </p>
+                <p>Join the Community and Vibe with us. Tag <b>$VCAT</b> And <b> @VibingCatSolana</b> and vibe Vibing Cat on Socials. </p>
               </div>
               <figure className="gtitleMImg">
                 <img src={gtitleImg} alt=""/>

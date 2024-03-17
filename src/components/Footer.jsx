@@ -87,6 +87,13 @@ export default function Footer() {
  const currentDate = new Date();
  const currentYear = currentDate.getFullYear();
  const copyright = `COPYRIGHT @ VIBING CAT ${currentYear}`;
+
+ const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
   return (
     <footer className='footer topShap'>
     <figure className='sectionShap'>
@@ -95,7 +102,7 @@ export default function Footer() {
       <Container>
         <Row className='align-items-end'>
           <Col md={4} className='order-2 order-md-1 text-center text-md-start mt-4 mt-md-0'>
-            <a href="/" className='footerLogo'>
+            <a href="/" className='footerLogo' onClick={scrollToTop}>
               VCAT <img src={logogif} alt='logo' />
             </a>
             <p className='wallet-txt'>{ftxtOne}</p>

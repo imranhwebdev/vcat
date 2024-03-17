@@ -4,8 +4,8 @@ import Banner from './components/Banner'
 import About from './components/About'
 import HowToBuy from './components/HowToBuy'
 import Tokenomics from './components/Tokenomics'
-import Community from './components/Community'
 import RoadMap from './components/RoadMap'
+import Community from './components/Community'
 import Footer from './components/Footer'
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
       <About />
       <HowToBuy />
       <Tokenomics />
-      <Community />
       <RoadMap />
+      <Community />
       <Footer />
     </>
   )

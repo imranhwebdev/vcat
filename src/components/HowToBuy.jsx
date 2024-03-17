@@ -9,7 +9,7 @@ import hsimg4 from "../assets/img/hsimg4.png";
 import sectionShaapLight from "../assets/img/sectionShapLight.png";
 import copyTxt from "../assets/img/copyTxt.png";
 export default function HowToBuy() {
-  const [textToCopy, setTextToCopy] = useState('0x69C0a0a9eC24B68Ad4795eD600cE23522E871994');
+  const [textToCopy, setTextToCopy] = useState('VP9UaBXLM4KYRvyjisu65rz8BU5xNAbewU7LVmyU2x4');
   const [isCopied, setIsCopied] = useState(false);
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(textToCopy)

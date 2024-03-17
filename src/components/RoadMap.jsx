@@ -1,7 +1,7 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import rtitleImg from '../assets/img/RtitleImg.gif';
-import sectionShapDeep from "../assets/img/sectionShapDeep.png";
+import sectionShapLight from "../assets/img/sectionShapLight.png";
 export default function RoadMap() {
   const title = "ROADMAP";
   const arrow = <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
@@ -36,7 +36,7 @@ const cardWrapper = [
   return (
     <section className='roadMap topShap' id='roadMap'>
     <figure className='sectionShap'>
-      <img src={sectionShapDeep} alt="" />
+      <img src={sectionShapLight} alt="" />
     </figure>
         <Container>
             <Row>

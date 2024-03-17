@@ -38,16 +38,23 @@ export default function Header() {
     setAudioPlaying(!audioPlaying);
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <header className={`heading ${scrolled ? 'position-fixed' : ''}`}>
         <Container className='d-flex align-items-center justify-content-between'>
-          <Link className="logo" href="/">
+          <Link className="logo" href="/"  onClick={scrollToTop}>
           VCAT <img src={logogif} alt='logo' />
           </Link>
           <nav className={`heading-menu ${isMenu ?'show-menu':''}`}>
             <div className="title d-flex align-items-center justify-content-between d-lg-none">
-              <Link className="logo" href="/">
+              <Link className="logo" href="/"  onClick={scrollToTop}>
               VCAT <img src={logogif} alt='logo' />
               </Link>
               <button className="heading-toggler" onClick={() => setIsMenu(!isMenu)}>
@@ -58,12 +65,12 @@ export default function Header() {
               </button>
             </div>
             <ul className="main_menu d-lg-flex align-items-center">
-              <Link href="#" className='heading-link text-capitalize' spy={true} smooth={true} offset={-320} duration={150} >VCAT</Link>
+              <Link href="#" onClick={scrollToTop} className='heading-link text-capitalize' spy={true} smooth={true} offset={-320} duration={150} >VCAT</Link>
               <Link to="about" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >About</Link>
               <Link to="howtobuy" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >How to buy</Link>
               <Link to="tokenomics" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={50} >Tokenomics</Link>
-              <Link to="vibe" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >Vibe</Link>
               <Link to="roadMap" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >Roadmap</Link>
+              <Link to="vibe" className='heading-link text-capitalize' spy={true} smooth={true} offset={-150} duration={170} >Vibe</Link>
             </ul>
           </nav>
           <div className="heading-actions d-flex align-items-center flex-wrap">
